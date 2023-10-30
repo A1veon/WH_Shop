@@ -1,40 +1,40 @@
-@import 'npm:normalize.css/normalize.css';
+/* @import 'normalize.css/normalize.css'; */
 
-/* roboto-mono-regular - latin */
-@font-face {
+
+/* @font-face {
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
   src: local(""),
     url("../fonts/roboto-mono/roboto-mono-v22-latin-regular.woff") format("woff"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
+   
     url("../fonts//roboto-mono/roboto-mono-v22-latin-regular.woff2") format("woff2");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ 
 }
 
-/* roboto-mono-500 - latin */
+
 @font-face {
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 500;
   src: local(""),
     url("../fonts/roboto-mono/roboto-mono-v22-latin-500.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
+   
     url("../fonts/roboto-mono/roboto-mono-v22-latin-500.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+ 
 }
 
-/* roboto-mono-700 - latin */
+
 @font-face {
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 700;
   src: local(""),
     url("../fonts/roboto-mono/roboto-mono-v22-latin-700.woff") format("woff"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
+   
     url("../fonts/roboto-mono/roboto-mono-v22-latin-700.woff2") format("woff2");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+  
+} */
 
 
 * {
@@ -46,11 +46,18 @@
   font-family: 'Nunito', sans-serif;
 }
 
+:root {
+  --color-primary: #597A91;
+  --color-secondary: black;
+  --color-text: white;
+  --color-main: #232533;
+}
+
 
 /* header style start */
 
 header{
-  background-color: black;
+  background-color: var(--color-secondary);
 }
 
 .header--main {
@@ -61,7 +68,7 @@ header{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  color: white;
+  color: var(--color-text);
   font-size: 18px;
 }
 
@@ -76,7 +83,7 @@ header{
 }
 
 .header--search{
-  background: white;
+  background: var(--color-text);
 }
 
 .header--search-form {
@@ -93,7 +100,7 @@ header{
   border-radius: 5%;
   outline: none;
   background: transparent;
-  color: black;
+  color: var(--color-secondary);
   font-size: 18px;
 }
 
@@ -110,15 +117,14 @@ header{
 }
 
 .button--header-search::before {
-  content: url(/src/img/svg/search.svg);
+  content: url("../img/svg/search.svg");
   font-size: 16px;
-  color: black;
 }
 
 
 .header--about-link {
   text-decoration: none;
-  color: white;
+  color: var(--color-text);
 }
 
 .header--menu-pic {
@@ -159,9 +165,9 @@ header{
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
-  color: white;
+  color: var(--color-text);
   font-size: 18px;
-  background: #597A91;
+  background: var(--color-primary);
 }
 
 .main--navigation {
@@ -208,7 +214,7 @@ header{
 }
 
 .navigation--link-hover {
-  color: black;
+  color: var(--color-secondary);
 }
 
 .main--navigation-link:hover {
@@ -239,7 +245,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #232533;
+  background-color: var(--color-main);
   overflow-x: hidden;
   height: 100vh;
   font-family: 'Nunito', sans-serif;
@@ -249,7 +255,7 @@ header{
   display: inline-flex;
   width: 1000px;
   height: 200px;
-  background-color: #597A91;
+  background-color: var(--color-primary);
 }
 
 .main--news-name {
@@ -259,7 +265,7 @@ header{
 /* footer style start */
 
 footer {
-  background-color: black;  
+  background-color: var(--color-secondary);
 }
 
 .footer--main {
@@ -271,7 +277,7 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  color: white;
+  color: var(--color-text);
   font-size: 18px;
 }
 
@@ -283,7 +289,7 @@ footer {
 
 .footer--about-link {
   text-decoration: none;
-  color: white;
+  color: var(--color-text);
 }
 
 .footer--menu {
@@ -295,3 +301,19 @@ footer {
   height: 26px;
   width: 26px;
 }
+
+/* Product page */
+
+.product--section {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+    row-gap: 15px;
+    column-gap: 50px;
+}
+
+.product--item {
+  background-color: var(--color-secondary);
+  border: solid var(--color-primary);
+}
+
